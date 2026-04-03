@@ -7,7 +7,7 @@ A Serilog sink that writes log events to self-contained interactive HTML files. 
 
 ## NuGet Package
 
-Available on NuGet: [Serilog.Sinks.HtmlFile](https://www.nuget.org/packages/Serilog.Sinks.HtmlFile)
+Available on NuGet: <a href="https://www.nuget.org/packages/Serilog.Sinks.HtmlFile" target="_blank">Serilog.Sinks.HtmlFile</a>
 
 ```shell
 dotnet add package Serilog.Sinks.HtmlFile
