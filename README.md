@@ -48,21 +48,38 @@ Log.Logger = new LoggerConfiguration()
 
 ## JSON Configuration
 
-The sink can also be configured via `appsettings.json`:
+The sink can also be configured via `appsettings.json` using [Serilog.Settings.Configuration](https://github.com/serilog/serilog-settings-configuration):
+
+```shell
+dotnet add package Serilog.Settings.Configuration
+```
 
 ```json
 {
   "Serilog": {
+    "Using": ["Serilog.Sinks.HtmlFile"],
     "WriteTo": [
       {
         "Name": "HtmlFile",
         "Args": {
-          "path": "logs/app.html"
+          "path": "logs/app-{Date}.html"
         }
       }
     ]
   }
 }
+```
+
+Then in your startup code:
+
+```csharp
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(configuration)
+    .CreateLogger();
 ```
 
 ## Size-Based Rolling and Archive Naming
@@ -150,7 +167,7 @@ When using a custom template, the default viewer scripts are not included. Your 
 
 ## Sample Application
 
-See [`samples/SampleWebApp`](samples/SampleWebApp) for a working ASP.NET Core example that demonstrates the sink with date-based file naming, size-based rolling, and archive naming.
+See [`samples/SampleWebApp`](samples/SampleWebApp) for a working ASP.NET Core example that demonstrates the sink with date-based file naming and size-based rolling.
 
 ## License
 
