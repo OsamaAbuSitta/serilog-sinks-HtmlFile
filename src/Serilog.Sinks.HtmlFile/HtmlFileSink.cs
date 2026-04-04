@@ -76,13 +76,17 @@ namespace Serilog.Sinks.HtmlFile
             try
             {
                 var directory = Path.GetDirectoryName(path);
+                
+                var fileName = FileNamingHelper.EvaluatePattern(Path.GetFileName(path));
+                var filePath = Path.Combine(directory, fileName);
+                
                 if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
                     Directory.CreateDirectory(directory);
 
-                var fileExists = File.Exists(path);
+                var fileExists = File.Exists(filePath);
 
                 _fileStream = new FileStream(
-                    path,
+                    filePath,
                     fileExists ? FileMode.Open : FileMode.CreateNew,
                     FileAccess.ReadWrite,
                     FileShare.Read);
