@@ -5,7 +5,7 @@
 
 A Serilog sink that writes log events to self-contained interactive HTML files. Each log file includes an embedded viewer with filtering, search, and level highlighting — no external dependencies or server required. Just open the `logs.html` file in a browser.
 
-<a href="https://osamaabusitta.github.io/serilog-sinks-HtmlFile/demo.html" target="_blank">Live Demo</a> — see the interactive log viewer in action.
+<a href="https://osamaabusitta.github.io/serilog-sinks-HtmlFile/demo.html" target="_blank">Live Demo</a> - see the interactive log viewer in action.
 
 ## NuGet Package
 
