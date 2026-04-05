@@ -5,6 +5,8 @@
 
 A Serilog sink that writes log events to self-contained interactive HTML files. Each log file includes an embedded viewer with filtering, search, and level highlighting — no external dependencies or server required. Just open the `.html` file in a browser.
 
+<a href="/demo.html" target="_blank">Live Demo</a> — see the interactive log viewer in action.
+
 ## NuGet Package
 
 Available on NuGet: <a href="https://www.nuget.org/packages/Serilog.Sinks.HtmlFile" target="_blank">Serilog.Sinks.HtmlFile</a>
@@ -168,6 +170,8 @@ When using a custom template, the default viewer scripts are not included. Your 
 ## Sample Application
 
 See [`samples/SampleWebApp`](samples/SampleWebApp) for a working ASP.NET Core example that demonstrates the sink with date-based file naming and size-based rolling.
+
+The sample includes a `/demo` endpoint that generates log entries covering all log levels, structured properties, exceptions, special characters, Unicode, and simulated API traffic — useful for exploring the full capabilities of the HTML log viewer.
 
 ## License
 

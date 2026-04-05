@@ -330,7 +330,7 @@ public class DefaultConfigurationTests : IDisposable
     [Fact]
     public void FullUsage_IConfiguration_AllDefaults_LogsAllLevels()
     {
-        var expectedLogFilePath = Path.Combine(_tempDir, $"logs/log-{DateTime.Now.ToString("yyyy-MM-dd")}.html");
+        var expectedLogFilePath = Path.Combine(_tempDir, $"logs/log-{DateTime.UtcNow.ToString("yyyy-MM-dd")}.html");
         var logFilePath = Path.Combine(_tempDir, "logs/log-{Date}.html");
 
         var json = $$"""
