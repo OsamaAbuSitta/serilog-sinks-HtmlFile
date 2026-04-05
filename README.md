@@ -3,9 +3,9 @@
 [![Build Status](https://github.com/OsamaAbuSitta/serilog-sinks-HtmlFile/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/OsamaAbuSitta/serilog-sinks-HtmlFile/actions/workflows/ci-cd.yml)
 [![NuGet](https://img.shields.io/nuget/v/Serilog.Sinks.HtmlFile.svg)](https://www.nuget.org/packages/Serilog.Sinks.HtmlFile)
 
-A Serilog sink that writes log events to self-contained interactive HTML files. Each log file includes an embedded viewer with filtering, search, and level highlighting — no external dependencies or server required. Just open the `.html` file in a browser.
+A Serilog sink that writes log events to self-contained interactive HTML files. Each log file includes an embedded viewer with filtering, search, and level highlighting — no external dependencies or server required. Just open the `logs.html` file in a browser.
 
-<a href="/demo.html" target="_blank">Live Demo</a> — see the interactive log viewer in action.
+<a href="https://osamaabusitta.github.io/serilog-sinks-HtmlFile/demo.html" target="_blank">Live Demo</a> — see the interactive log viewer in action.
 
 ## NuGet Package
 
